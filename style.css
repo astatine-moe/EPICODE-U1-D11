@@ -1,0 +1,45 @@
+html,
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tr img {
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(34, 120, 211);
+}
+
+a:hover {
+    color: rgb(34, 120, 211);
+    text-decoration: underline;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 4em;
+}
+
+#modal {
+    display: none;
+}
