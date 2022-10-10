@@ -10,6 +10,38 @@
         <header>
             <h1 id="headingOne">Morgan's Smartphone Shop</h1>
             <button id="send-message">Send message</button>
+
+            <h5>Actions</h5>
+            <button onclick="changeH1('The Best Phone Shop');" class="small">
+                Heading
+            </button>
+            <button class="small" onclick="changeBackgroundColor('lightblue');">
+                Background color
+            </button>
+            <button
+                class="small"
+                onclick="changeFooterAddress('1234 Main Street, New York NY 10001');"
+            >
+                Footer
+            </button>
+            <button
+                class="small"
+                onclick="addCssToLinks('color: red; font-size: 20px;');"
+            >
+                Link CSS
+            </button>
+            <button
+                class="small"
+                onclick="toggleCssClassOnImages('img-visible');"
+            >
+                Images
+            </button>
+            <button class="small" onclick="colorThePrice();">
+                Price color (same)
+            </button>
+            <button class="small" onclick="colorThePrice(true);">
+                Price color (different)
+            </button>
         </header>
 
         <main>

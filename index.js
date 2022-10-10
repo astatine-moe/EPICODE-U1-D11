@@ -19,7 +19,6 @@ const changeH1 = (text) => {
     const h1 = document.getElementById("headingOne");
     h1.innerHTML = text;
 };
-changeH1("The Best Phone Shop");
 
 //change background color
 const changeBackgroundColor = (color) => {
@@ -27,15 +26,12 @@ const changeBackgroundColor = (color) => {
     const body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = color;
 };
-changeBackgroundColor("lightblue");
 
 //change footer address
 const changeFooterAddress = (address) => {
     const footerAddress = document.getElementById("footer-address");
     footerAddress.innerHTML = address;
 };
-
-changeFooterAddress("1234 Main Street, New York, NY 10001");
 
 //add css to every link
 const addCssToLinks = (css) => {
@@ -45,8 +41,6 @@ const addCssToLinks = (css) => {
     }
 };
 
-addCssToLinks("color: red; font-size: 20px;");
-
 //toggle css class on every image
 const toggleCssClassOnImages = (cssClass) => {
     const images = document.getElementsByTagName("img");
@@ -54,8 +48,6 @@ const toggleCssClassOnImages = (cssClass) => {
         images[i].classList.toggle(cssClass);
     }
 };
-
-toggleCssClassOnImages("img-visible");
 
 //color the price of the products
 let colors = [
@@ -71,13 +63,22 @@ let colors = [
     "white",
 ];
 
-const colorThePrice = () => {
+const colorThePrice = (different = false) => {
     const prices = document.getElementsByClassName("price");
+    const color = colors[Math.floor(Math.random() * colors.length)];
     //random colors
     for (let i = 0; i < prices.length; i++) {
-        prices[i].style.color =
-            colors[Math.floor(Math.random() * colors.length)];
+        prices[i].style.color = different
+            ? colors[Math.floor(Math.random() * colors.length)]
+            : color;
     }
 };
 
-colorThePrice();
+const runJavaScript = () => {
+    changeH1("The Best Phone Shop");
+    changeBackgroundColor("lightblue");
+    changeFooterAddress("1234 Main Street, New York, NY 10001");
+    addCssToLinks("color: red; font-size: 20px;");
+    toggleCssClassOnImages("img-visible");
+    colorThePrice(true);
+};
