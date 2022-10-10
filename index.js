@@ -60,7 +60,6 @@ let colors = [
     "pink",
     "brown",
     "black",
-    "white",
 ];
 
 const colorThePrice = (different = false) => {
